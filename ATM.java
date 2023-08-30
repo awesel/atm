@@ -20,7 +20,12 @@ public class ATM {
     }
 
     public void closeAccount(String userid) {
-
+        if (checkBalance(userid) != 0) {
+            System.out.println("Nope, uou still have money");
+            return;
+        } else {
+            atm.remove(userid);
+        }
     }
 
     public Double checkBalance(String userid) {
