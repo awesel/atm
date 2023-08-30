@@ -32,8 +32,10 @@ public class ATM {
         return atm.get(userid);
     }
 
-    public void depositMoney(String userid, Double amount) {
-    }
+    public Double depositMoney(String userid, Double amount) {
+        atm.put(userid, atm.get(userid) + amount);
+        return checkBalance(userid);
+    } // dfd
 
     public void withdrawMoney(String userid, Double amount) {
     }
