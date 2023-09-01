@@ -43,6 +43,8 @@ public class ATM {
     }
 
     public void transferMoney(String fromAccount, String toAccount, Double amount) {
+        depositMoney(toAccount, amount);
+        withdrawMoney(fromAccount, amount);
     }
 
     public void audit() {
