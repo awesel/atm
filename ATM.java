@@ -37,7 +37,9 @@ public class ATM {
         return checkBalance(userid);
     } // dfd
 
-    public void withdrawMoney(String userid, Double amount) {
+    public Double withdrawMoney(String userid, Double amount) {
+        atm.put(userid, atm.get(userid) - amount);
+        return checkBalance(userid);
     }
 
     public void transferMoney(String fromAccount, String toAccount, Double amount) {
