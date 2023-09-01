@@ -48,11 +48,19 @@ public class ATM {
     }
 
     public void audit() {
-
+        Set<String> john = atm.keySet();
+        String blonkus = "";
+        for (String key : john) {
+            blonkus += key;
+            blonkus += " ";
+            blonkus += atm.get(key);
+            blonkus += "\n";
+        }
+        writeFile(blonkus);
     }
 
     public static void writeFile(String toWrite) {
-        String name = "write_this.txt";
+        String name = "AccountAudit.txt";
 
         // Write the string to the file
         try {
